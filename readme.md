@@ -1,6 +1,6 @@
 # did-i-see
 
-A hook for when see elements in viewport of browser.
+A lightweight function that executes callback when we see DOM elements.
 
 Build with [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 

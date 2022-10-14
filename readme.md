@@ -4,7 +4,14 @@ A hook for when see elements in viewport of browser.
 
 Build with [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 
+🔴 Demo: https://did-i-see.vercel.app/demo
+
 ## Example Usage
+
+```html
+<!-- It will inject the didISee to your window -->
+<script src="https://did-i-see.vercel.app/index.js">
+```
 
 ```js
 const options = {
@@ -12,7 +19,7 @@ const options = {
   ...
 };
 
-didISee(
+window.didISee(
   ".element",
   ({ target }) => {
     console.log("I saw the element", target);

@@ -1,8 +1,8 @@
 # did-i-see
 
-A lightweight function that executes callback when we see DOM elements.
+A lightweight function that executes callback when we see specific DOM elements.
 
-Build with [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+Built with [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
 
 🔴 Demo: https://did-i-see.vercel.app/demo
 

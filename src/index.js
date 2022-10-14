@@ -72,3 +72,5 @@ const didISee = (query, callback, options = {}) => {
   }
   observer.observe(items);
 };
+
+window.didISee = didISee;

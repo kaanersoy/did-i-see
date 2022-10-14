@@ -14,8 +14,8 @@ const options = {
 
 didISee(
   ".element",
-  () => {
-    console.log("I saw the element");
+  ({ target }) => {
+    console.log("I saw the element", target);
   },
   options
 );

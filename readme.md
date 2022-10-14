@@ -21,11 +21,11 @@ didISee(
 );
 ```
 
-| Arguments  |                                                                  | required |
-| ---------- | ---------------------------------------------------------------- | :------: |
-| `query`    | query for selecting DOM elements                                 |   true   |
-| `callback` | callback                                                         |   true   |
-| `options`  | options of didISee (see options down below for more information) |  false   |
+| Arguments              |                                                                                                    | required |
+| ---------------------- | -------------------------------------------------------------------------------------------------- | :------: |
+| `query`                | query for selecting DOM elements                                                                   |   true   |
+| `callback({ target })` | callback that will called when see element in viewport. it returns saw element in screen as target |   true   |
+| `options`              | options of didISee (see options down below for more information)                                   |  false   |
 
 | Options           | type                                                                    | default |
 | ----------------- | ----------------------------------------------------------------------- | :-----: |

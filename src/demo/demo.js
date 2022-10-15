@@ -8,7 +8,6 @@ const addExperiences = () => {
   experienceGained++;
   const allCount = allExperienceElements.length;
   const percentage = (100 * experienceGained) / allCount;
-  console.log(100 - percentage);
   currentExperience.style.transform = `translateY(${100 - percentage}%)`;
 };
 

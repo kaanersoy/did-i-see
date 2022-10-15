@@ -6,32 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-family: sans-serif;
+      }
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      h1,
+      h3 {
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+        padding: 50px 0;
+        max-width: 90%;
+        margin: 0 auto;
+      }
       .block {
         height: 500px;
         width: 300px;
-        border: 1px solid red;
+        margin: 0 auto;
+        max-width: 90%;
+        border: 1px solid blue;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .experience-bar {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        height: 120px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(9, 133, 227, 0.251);
+      }
+      .experience-bar h3 {
+        color: #2d3436;
+        margin-bottom: 10px;
+      }
+      .experience-bar-wrapper {
+        position: relative;
+        width: 20px;
+        height: 80px;
+        margin: 0 auto;
+        border: 2px solid gray;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .experience-bar .current-experience {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #6c5ce7;
+        transition: 200ms all ease;
       }
     </style>
   </head>
   <body>
-    <h1>Scroll & Check the console messages 👨‍💻</h1>
+    <h1>
+      Scroll Down to see the BOXES<br />
+      and complete the bar! 👨‍💻
+    </h1>
+    <div class="experience-bar">
+      <h3>GOAL BAR</h3>
+      <div class="experience-bar-wrapper">
+        <div class="current-experience"></div>
+      </div>
+    </div>
+    <div class="block withObserving">
+      <h1>BOX1</h1>
+    </div>
     <div class="block"></div>
     <div class="block"></div>
+    <div class="block withObserving">
+      <h1>BOX1</h1>
+    </div>
     <div class="block"></div>
-    <div class="block withObserving" id="first">
-      <h1>I saw it!!!</h1>
+    <div class="block"></div>
+    <div class="block withObserving">
+      <h1>BOX2</h1>
     </div>
     <div class="block"></div>
     <div class="block"></div>
     <div class="block"></div>
     <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block withObserving" id="second">
-      <h1>I saw it twice!!!</h1>
+    <div class="block withObserving">
+      <h1>BOX3</h1>
     </div>
     <div class="block"></div>
     <div class="block"></div>
+    <div class="block withObserving">
+      <h1>BOX4</h1>
+    </div>
     <div class="block"></div>
     <div class="block"></div>
     <script src="/index.js"></script>

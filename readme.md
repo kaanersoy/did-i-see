@@ -21,8 +21,8 @@ const options = {
 
 window.didISee(
   ".element",
-  ({ target }) => {
-    console.log("I saw the element", target);
+  ({ data }) => {
+    console.log("I saw the element", data.target);
   },
   options
 );

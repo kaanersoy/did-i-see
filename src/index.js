@@ -2,12 +2,12 @@ const DEFAULT_OPTIONS = {
   once: false,
   perc: 0.5,
   root: null,
-  multipleElement: false,
+  onlyEnterence: true,
 };
 
 const validate = (items, callback, options) => {
   // Items required validation
-  if (!items || items.length === 0) {
+  if (items.length === 0) {
     throw Error("No element found with query. Please try another query.");
   }
 
@@ -35,12 +35,7 @@ const didISee = (query, callback, options = {}) => {
   };
 
   // Select items
-  let items;
-  if (options.multipleElement) {
-    items = document.querySelectorAll(query);
-  } else {
-    items = document.querySelector(query);
-  }
+  const items = document.querySelectorAll(query);
 
   validate(items, callback, options);
 
@@ -57,20 +52,17 @@ const didISee = (query, callback, options = {}) => {
           observer.unobserve(entry.target);
         }
       }
-      if (entry.isIntersecting) {
-        callback({
-          target: entry.target,
-        });
+      if (options.onlyEnterence && !entry.isIntersecting) {
+        return;
       }
+      callback({
+        data: entry,
+      });
     });
   }, obsOptions);
 
   // Starting observations
-  if (options.multipleElement) {
-    items.forEach((item) => observer.observe(item));
-    return;
-  }
-  observer.observe(items);
+  items.forEach((item) => observer.observe(item));
 };
 
 window.didISee = didISee;

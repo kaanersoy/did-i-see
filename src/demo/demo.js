@@ -13,11 +13,10 @@ const addExperiences = () => {
 
 didISee(
   EXPERIENCE_ELEMENT_QUERY,
-  ({ target }) => {
+  ({ data }) => {
     addExperiences();
   },
   {
     once: true,
-    multipleElement: true,
   }
 );

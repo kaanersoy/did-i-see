@@ -28,15 +28,15 @@ window.didISee(
 );
 ```
 
-| Arguments              |                                                                                                    | required |
-| ---------------------- | -------------------------------------------------------------------------------------------------- | :------: |
-| `query`                | query for selecting DOM elements                                                                   |   true   |
-| `callback({ target })` | callback that will called when see element in viewport. it returns saw element in screen as target |   true   |
-| `options`              | options of didISee (see options down below for more information)                                   |  false   |
+| Arguments            |                                                                  | required |
+| -------------------- | ---------------------------------------------------------------- | :------: |
+| `query`              | query for selecting DOM elements                                 |   true   |
+| `callback({ data })` | callback that will be fired when element in viewport             |   true   |
+| `options`            | options of didISee (see options down below for more information) |  false   |
 
-| Options           | type                                                                    | default |
-| ----------------- | ----------------------------------------------------------------------- | :-----: |
-| `once`            | if it is true callback will fired only one time.                        |  false  |
-| `multipleElement` | it means query will work with `querySelectorAll` for multiple elements. |  false  |
-| `perc`            | element percentage that will fire callback                              |   0.5   |
-| `root`            | root element for scrolling area                                         |  null   |
+| Options         | type                                                                                             | default |
+| --------------- | ------------------------------------------------------------------------------------------------ | :-----: |
+| `once`          | if it is true callback will be fired only one time for each element                              |  false  |
+| `onlyEnterence` | if it is false callback will be fired when element is entering the screen and leaving the screen |  true   |
+| `perc`          | percentage of element that callback will be fired                                                |   0.5   |
+| `root`          | root element for scrolling area                                                                  |  null   |

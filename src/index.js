@@ -2,7 +2,7 @@ const DEFAULT_OPTIONS = {
   once: false,
   perc: 0.5,
   root: null,
-  onlyEnterence: true,
+  onlyEntrance: true,
 };
 
 const validate = (items, callback, options) => {
@@ -52,7 +52,7 @@ const didISee = (query, callback, options = {}) => {
           observer.unobserve(entry.target);
         }
       }
-      if (options.onlyEnterence && !entry.isIntersecting) {
+      if (options.onlyEntrance && !entry.isIntersecting) {
         return;
       }
       callback({
